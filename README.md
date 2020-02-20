@@ -50,6 +50,8 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 ## Improvement
 
+- Add Github version management
+
 - fork `tap:i18n` to make use of NPM simpl-schema
 
 - add `bcrypt`

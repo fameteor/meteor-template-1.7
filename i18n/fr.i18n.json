@@ -1,0 +1,16 @@
+{
+	"comp" : {
+		"languageSelect" : {
+			"fr" :	"français",
+			"en" : 	"anglais"
+		},
+		"navBar" : {
+			"adminMenu" :	{
+				"title" : "admin FR"
+			},
+			"devMenu" :	{
+				"title" : "dev FR"
+			}
+		}
+	}
+}
