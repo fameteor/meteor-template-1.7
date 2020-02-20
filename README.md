@@ -1,5 +1,7 @@
+# Meteor 1.7  + Bootstrap 3 + a lot of modules template
 
 
+## Installation
 - `meteor create  --release 1.7 meteor-template-1.7 --full`
 
 - bootstrap 3.3.6 : `meteor add twbs:bootstrap`
@@ -24,6 +26,6 @@
 
 
 
-To improve
+## Improvement
 
 - fork `tap:i18n` to make use of NPM simpl-schema
