@@ -4,31 +4,41 @@ import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
 
 Meteor.startup(() => {
-  // if the Links collection is empty
-  if (Links.find().count() === 0) {
-    const data = [
-      {
-        title: 'Do the Tutorial',
-        url: 'https://www.meteor.com/try',
-        createdAt: new Date(),
-      },
-      {
-        title: 'Follow the Guide',
-        url: 'http://guide.meteor.com',
-        createdAt: new Date(),
-      },
-      {
-        title: 'Read the Docs',
-        url: 'https://docs.meteor.com',
-        createdAt: new Date(),
-      },
-      {
-        title: 'Discussions',
-        url: 'https://forums.meteor.com',
-        createdAt: new Date(),
-      },
-    ];
+	// Default ROLES creation ------------------------------------
+	const rolesList = [
+		"ADMIN",
+		"DEV"
+	];
+	
+	/* next version of alanning roles (not supported with that mongo version)
+	rolesList.forEach(function(role) {
+		Roles.createRole(role, {unlessExists: true});
+	});
+	*/
+		
+	// Default users creation ------------------------------------
+    const initialUsersList = [
+		{email:"admin@orange.com", 	password:"adminadmin",	alias: "ADMIN", roles:["ADMIN"], 	language : "fr"},
+		{email:"dev@orange.com", 	password:"devdev",	 	alias: "DEV",	roles:["DEV"], 		language : "en"},
+	];
 
-    data.forEach(link => Links.insert(link));
-  }
+	if (Meteor.users.find().count() === 0) {
+		initialUsersList.forEach(function(user) {
+			const userId = Accounts.createUser(
+					{
+						"email": 			user.email,
+						"password" : 		user.password
+					}
+				)
+				// We add the alias
+				Meteor.users.update({_id: userId}, {$set: {
+						'profile.alias':user.alias,
+						'profile.language':user.language
+				}});
+				// We update the roles
+				Roles.addUsersToRoles(userId, user.roles);
+		});
+		console.log("Default users created.")
+	}
+	else console.log("Default users already exists.")
 });

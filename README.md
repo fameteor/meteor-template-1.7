@@ -1,4 +1,16 @@
-# Meteor 1.7  + Bootstrap 3 + a lot of usefull modules
+# Meteor 1.7  + Bootstrap 3 + a lot of useful modules
+
+## Available components
+
+## Default users and roles creation
+
+The file `imports/startup/server/fixtures.js` initialises the default roles `["DEV","ADMIN"]` and the defaut users `admin@orange.com` (password : `adminadmin`) and `dev@orange.com` (password : `devdev`).
+
+### navBar
+
+### languageSelect
+
+### autoDoc
 
 
 ## Installation
@@ -16,7 +28,7 @@
 
 - `meteor add peppelg:bootstrap-3-modal`
 
-- `meteor add alanning:roles`
+- [alanning:roles@1.2.16](https://github.com/Meteor-Community-Packages/meteor-roles/tree/v1)`meteor add alanning:roles`
 
 - `meteor npm install --save simpl-schema`
 
@@ -31,6 +43,11 @@
 - and `meteor add stylus@=2.513.14`
 
 
+## Bugs
+
+- All users publication when admin do not work ??
+
+
 ## Improvement
 
 - fork `tap:i18n` to make use of NPM simpl-schema
@@ -38,3 +55,14 @@
 - add `bcrypt`
 
 - `stylus` deprecated
+
+- put default roles/ users  in a parameter files (where ? both ?).
+
+- Ajouter un usefull helpers mis à jour !
+
+- Add a linter
+
+
+## Upgrades : to do
+
+- Allaning role 3 : change the default users and default roles creation code (depending on mongo version).

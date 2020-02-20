@@ -26,10 +26,10 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 twbs:bootstrap
 mizzao:user-status
 peppelg:bootstrap-3-modal
-alanning:roles
 aldeed:autoform@6.0.0
 tap:i18n
 zimme:active-route
 stylus@=2.513.14
 accounts-password
 ian:accounts-ui-bootstrap-3
+alanning:roles
