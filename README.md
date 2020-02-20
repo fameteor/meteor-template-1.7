@@ -1,4 +1,4 @@
-# Meteor 1.7  + Bootstrap 3 + a lot of modules template
+# Meteor 1.7  + Bootstrap 3 + a lot of usefull modules
 
 
 ## Installation
@@ -7,6 +7,8 @@
 - bootstrap 3.3.6 : `meteor add twbs:bootstrap`
 
 - fontawesome-free 5.12.1 : `meteor npm install --save @fortawesome/fontawesome-free`
+
+- `meteor add stylus`
 
 - accounts-password : `meteor add accounts-password` `meteor add ian:accounts-ui-bootstrap-3`
 
@@ -24,8 +26,15 @@
 
 - `meteor add zimme:active-route`
 
+- for starting problems : `meteor npm install --save-exact @babel/runtime@7.0.0-beta.55`
+
+- and `meteor add stylus@=2.513.14`
 
 
 ## Improvement
 
 - fork `tap:i18n` to make use of NPM simpl-schema
+
+- add `bcrypt`
+
+- `stylus` deprecated
