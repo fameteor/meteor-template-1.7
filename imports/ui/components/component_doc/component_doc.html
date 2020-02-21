@@ -1,13 +1,13 @@
 <template name="component_doc">
 	<div class="row">
-		<div class="col-md-2">
-			<h2>documentation</h2>
+		<div class="col-md-3">
+			<h2>{{> icon name="dev"}} documentation</h2>
 			{{#each chaptersList}}
-				<h3>{{> icon name="dev"}} {{chapter}}</h3>
+				<h3>{{chapter}}</h3>
 				<ul>
 					{{#with componentsList suffix}}
 						{{#each .}}
-							<li><a href="/dev/component_doc/{{.}}{{../../suffix}}">{{.}}</a></li>
+							<li><a href="/dev/component_doc/{{.}}/{{../../suffix}}">{{.}}</a></li>
 						{{/each}}
 					{{else}}
 						No documentation available
@@ -15,10 +15,10 @@
 				</ul>
 			{{/each}}
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-9">
 			{{#with selectedTemplateName}}
-				<h2><code>{{.}}</code></h2>
-				{{> Template.dynamic template=.}}
+				<div class="text-center"><h2>{{> icon name="dev"}} <code>{{.}}</code></h2></div>
+				{{> Template.dynamic template=selectedDocTemplateName}}
 			{{/with}}
 		</div>
 	</div>

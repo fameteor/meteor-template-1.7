@@ -1,4 +1,4 @@
 export const component_docParms = [
-	{chapter:"components",suffix:"_DOC"},
-	{chapter:"pages",suffix:"_PAGESDOC"},
+	{chapter:"components",suffix:"_comp_doc"},
+	{chapter:"pages",suffix:"_DOC"},
 ];

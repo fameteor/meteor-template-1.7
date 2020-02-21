@@ -1,5 +1,5 @@
 // Client entry point, imports all client code
-
+import { Session } from 'meteor/session'
 import '/imports/startup/client';
 import '/imports/startup/both';
 
@@ -7,20 +7,29 @@ import '/imports/startup/both';
 // i18n initialisation
 
 Meteor.startup(function () {
-	getUserLanguage = function () {
-		// Put here the logic for determining the user language
-		// If the user has a language, the user's language is choosen
-		return "fr";
-		// Otherwise defaut language
-		
-	};
+	
+	// Set the language
+	Session.setDefault("language", client_PARMS.defaultLanguage);
+	// Set and reset the language anytime it is changed
+	Tracker.autorun(function() {
+		var currentLanguage = Session.get("language");
+		TAPi18n.setLanguage(currentLanguage);
+		console.log('Language changed to : ' + currentLanguage);
+	});
+	// Run on login / logout
+	Tracker.autorun(function() {
+		// On login
+		if (Meteor.user()) {
+			if (	Meteor.user().profile
+					&& Meteor.user().profile.language) {
+				Session.set("language", Meteor.user().profile.language);
+			}
+		}
+		// On logout
+		else {
+			
+		}
+	});
+	
 
-    TAPi18n.setLanguage(getUserLanguage())
-		.done(function () {
-			// Session.set("showLoadingIndicator", false);
-		})
-		.fail(function (error_message) {
-			// Handle the situation
-			console.log(error_message);
-		});
   });

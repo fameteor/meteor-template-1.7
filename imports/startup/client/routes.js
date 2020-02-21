@@ -27,7 +27,7 @@ FlowRouter.route('/dev/component_doc', {
 	}
 });
 
-FlowRouter.route('/dev/component_doc/:componentName', {
+FlowRouter.route('/dev/component_doc/:componentName/:suffix', {
 	// name: 'App.home',
 	action() {
 		BlazeLayout.render('App_body', { main: 'component_doc'});

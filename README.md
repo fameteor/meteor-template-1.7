@@ -49,6 +49,7 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 
 ## Improvement
+- Add server link icon
 
 - Add Github version management
 
