@@ -31,5 +31,11 @@ Meteor.startup(function () {
 		}
 	});
 	
+	// -----------------------------------------
+	// Global helpers
+	UI.registerHelper('hlp_eq', function(a,b) {
+		return (a === b);
+	});
+	
 
   });

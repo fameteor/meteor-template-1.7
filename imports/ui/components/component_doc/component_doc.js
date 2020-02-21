@@ -8,16 +8,10 @@ import '../languageSelect/languageSelect_comp_doc.js';
 
 Template.component_doc.helpers({
 	componentsList(suffix) {
-		console.log(suffix)
 		// We list the names of the components having doc
 		var componentsList = [];
 		// We list all templates ending by suffix, for instance "_doc"
-		
-
 		Object.keys(Template).map(function(key) {
-			console.log(key)
-			console.log(suffix)
-			console.log(key.endsWith(suffix))
 			if (key.endsWith(suffix)) componentsList.push(key.slice(0, key.length - suffix.length))
 		});
 		return componentsList;
@@ -32,7 +26,6 @@ Template.component_doc.helpers({
 		return FlowRouter.getParam("suffix");
 	},
 	chaptersList() {
-		console.log(component_docParms)
 		return component_docParms;
 	}
 });

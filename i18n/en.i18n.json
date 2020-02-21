@@ -12,6 +12,10 @@
 				"title" : "development",
 				"tplDoc": "templates documentation"
 			}
+		},
+		"serverStatus": {
+			"connected":	"connected to the server",
+			"disconnected": "disconnected from the server"
 		}
 	}
 }
