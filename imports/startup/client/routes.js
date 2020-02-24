@@ -3,8 +3,9 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 // Import needed templates
 import '../../ui/layouts/body/body.js';
-import '../../ui/pages/home/home.js';
-import '../../ui/pages/not-found/not-found.js';
+import '../../ui/components/router/routerLogin.js';
+import '../../ui/components/router/routerHome.js';
+import '../../ui/components/router/routerNotFound.js';
 import '../../ui/components/component_doc/component_doc.js';
 
 // Global subscriptions
@@ -16,7 +17,7 @@ FlowRouter.subscriptions = function(params, queryparams) {
 FlowRouter.route('/', {
 	// name: 'App.home',
 	action() {
-		BlazeLayout.render('App_body', { main: 'App_home' });
+		BlazeLayout.render('App_body', { main: 'routerHome' });
 	}
 });
 
@@ -38,6 +39,6 @@ FlowRouter.route('/dev/component_doc/:componentName/:suffix', {
 
 FlowRouter.notFound = {
   action() {
-    BlazeLayout.render('App_body', { main: 'App_notFound' });
+    BlazeLayout.render('App_body', { main: 'routerNotFound' });
   },
 };

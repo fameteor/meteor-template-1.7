@@ -16,6 +16,19 @@
 		"routerServerStatus": {
 			"connected":	"connecté au serveur",
 			"disconnected": "déconnecté du serveur"
+		},
+		"routerLogin": {
+			"msg":	"Page login"
+		},
+		"routerHome": {
+			"msg":	"Page d'accueil"
+		},
+		"routerNotFound": {
+			"msg":	"Page non trouvée"
+		},
+		"routerPrevNext": {
+			"previous": "page précédente",
+			"next": "page suivante"
 		}
 	}
 }

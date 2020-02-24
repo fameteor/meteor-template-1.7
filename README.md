@@ -69,6 +69,8 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - Add a linter
 
+- Add a css on Next/Previous page buttons : change cursor and hover ...
+
 
 ## Upgrades : to do
 
