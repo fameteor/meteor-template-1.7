@@ -1,26 +1,29 @@
 import { Session } from 'meteor/session'
-import './languageSelect.html';
-import '../../../startup/both/both_PARMS.js';
+import './routerLanguageSelect.html';
+import '../../../startup/client/client_PARMS.js';
 
 // ---------------------------------------------------------------
 // HELPERS
 // ---------------------------------------------------------------
-Template.languageSelect.helpers({
+Template.routerLanguageSelect.helpers({
 	languageList() {
-		return both_PARMS.languages;
+		return client_PARMS.languages;
 	},
 	i18nLanguageEntry(language) {
-		return "comp.languageSelect." + language;
+		return "comp.routerLanguageSelect." + language;
 	},
 	selectedLanguage() {
 		return Session.get("language");
+	},
+	activeLanguage() {
+		return (Session.get("language") === this.toString()) ? 'active' : '';
 	}
 });
 
 // ---------------------------------------------------------------
 // EVENTS
 // ---------------------------------------------------------------
-Template.languageSelect.events({
+Template.routerLanguageSelect.events({
 	'click .languageSelector'(evt, tpl) {
 		// Change the session parameter 'language'
 		Session.set("language",this.toString());

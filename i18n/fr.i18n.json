@@ -1,9 +1,5 @@
 {
 	"comp" : {
-		"languageSelect" : {
-			"fr" :	"français",
-			"en" : 	"anglais"
-		},
 		"navBar" : {
 			"adminMenu" :	{
 				"title" : "admin FR"
@@ -13,7 +9,11 @@
 				"tplDoc": "documentation des templates"
 			}
 		},
-		"serverStatus": {
+		"routerLanguageSelect" : {
+			"fr" :	"français",
+			"en" : 	"anglais"
+		},
+		"routerServerStatus": {
 			"connected":	"connecté au serveur",
 			"disconnected": "déconnecté du serveur"
 		}

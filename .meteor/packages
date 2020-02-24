@@ -33,3 +33,5 @@ stylus@=2.513.14
 accounts-password
 ian:accounts-ui-bootstrap-3
 alanning:roles
+chrismbeckett:toastr
+aldeed:collection2@3.0.0

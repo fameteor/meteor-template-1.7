@@ -42,6 +42,10 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - and `meteor add stylus@=2.513.14`
 
+- `meteor add chrismbeckett:toastr`
+
+- `meteor add aldeed:collection2@3.0.0`
+
 
 ## Bugs
 

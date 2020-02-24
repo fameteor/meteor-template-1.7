@@ -1,8 +1,8 @@
-import './serverStatus.html';
+import './routerServerStatus.html';
 import '../icon/icon.js';
 
 
-Template.serverStatus.helpers({
+Template.routerServerStatus.helpers({
 	status() {
 		return Meteor.status().status;
 	},

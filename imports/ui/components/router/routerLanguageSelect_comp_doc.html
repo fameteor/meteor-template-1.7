@@ -1,8 +1,8 @@
-<template name="languageSelect_comp_doc">
+<template name="routerLanguageSelect_comp_doc">
 
 	<!-- =============================================== -->
 	<h3>purpose</h3>
-	The <code>languageSelect</code> component displays a Bootstrap 3 <code>&lt;li class="dropdown"&gt;&lt;/li&gt;</code> selection list that can be directly integrated in a Bootstrap 3 navigation bar.
+	The <code>routerLanguageSelect</code> component displays a Bootstrap 3 <code>&lt;li class="dropdown"&gt;&lt;/li&gt;</code> selection list that can be directly integrated in a Bootstrap 3 navigation bar.
 	
 	<!-- =============================================== -->
 	<h3>example</h3>
@@ -26,7 +26,8 @@
 	<!-- =============================================== -->
 	<h3>how does it works ?</h3>
 	<p>A global session variable <code>language</code> is used to defined the language of UI.</p>
-	<p>On startup, the session variable <code>language</code> is loaded from the client parameter <code>/imports/ui/startup/client/client_PARMS.js</code>, property<code>defaultLanguage</code>.</p>
+	<p>On startup, the session variable <code>language</code> is loaded from the client parameters <code>/imports/ui/startup/client/client_PARMS.js</code>, property<code>defaultLanguage</code>.</p>
+	<p>The available languages are defined in the client parameters <code>/imports/ui/startup/client/client_PARMS.js</code>, property<code>languages</code>.</p>
 	<p>When a user logs in, the session variable <code>language</code> is loaded from the user's <code>profile.language</code> parameter if it exists.</p>
 	<p>
 		When clicking on another langage, 2 actions are done :

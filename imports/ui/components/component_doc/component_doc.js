@@ -4,7 +4,7 @@ import { component_docParms } from './component_docParms.js';
 // Components docs import
 import './component_doc_DOC.js';
 import '../icon/icon_DOC.js';
-import '../languageSelect/languageSelect_comp_doc.js';
+import '../router/routerLanguageSelect_comp_doc.js';
 
 Template.component_doc.helpers({
 	componentsList(suffix) {
