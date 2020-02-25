@@ -56,6 +56,10 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - Add Github version management
 
+- if user not logged, add redirect afterlogin in a session var to force the initial requested route.
+
+- User management to be added
+
 - fork `tap:i18n` to make use of NPM simpl-schema
 
 - add `bcrypt`
