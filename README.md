@@ -53,7 +53,6 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 
 ## Improvement
-- Add server link icon
 
 - Add Github version management
 
@@ -63,13 +62,11 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - `stylus` deprecated
 
-- put default roles/ users  in a parameter files (where ? both ?).
-
 - Ajouter un usefull helpers mis à jour !
 
 - Add a linter
 
-- Add a css on Next/Previous page buttons : change cursor and hover ...
+- Modify waiting template to be able to wait for multiple reasons, with multiple waiting messages (server ofline, data loading..)
 
 
 ## Upgrades : to do

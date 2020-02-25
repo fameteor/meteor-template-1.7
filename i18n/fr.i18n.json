@@ -1,6 +1,6 @@
 {
 	"comp" : {
-		"navBar" : {
+		"routerNavBar" : {
 			"adminMenu" :	{
 				"title" : "admin",
 				"usersManagement" : "gestion des utilisateurs"
@@ -28,6 +28,9 @@
 		"routerPrevNext": {
 			"previous": "page précédente",
 			"next": "page suivante"
+		},
+		"adminUsers": {
+			"title": "Gestion des utilisateurs"
 		}
 	}
 }
