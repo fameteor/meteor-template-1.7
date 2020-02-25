@@ -6,7 +6,7 @@
 				"usersManagement" : "gestion des utilisateurs"
 			},
 			"devMenu" :	{
-				"title" : "développement",
+				"title" : "dev",
 				"tplDoc": "documentation des templates"
 			}
 		},
