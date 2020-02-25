@@ -1,5 +1,6 @@
 // Client entry point, imports all client code
 import { Session } from 'meteor/session'
+// import { AccountsUIBootstrap3 } from 'meteor/accounts-ui-bootstrap-3'
 import '/imports/startup/client';
 import '/imports/startup/both';
 
@@ -14,6 +15,7 @@ Meteor.startup(function () {
 	Tracker.autorun(function() {
 		var currentLanguage = Session.get("language");
 		TAPi18n.setLanguage(currentLanguage);
+		accountsUIBootstrap3.setLanguage(currentLanguage);
 	});
 	// Run on login / logout
 	Tracker.autorun(function() {

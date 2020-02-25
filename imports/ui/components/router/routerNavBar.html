@@ -37,21 +37,21 @@
 			{{/if}}
 			<ul class="nav navbar-nav navbar-right">
 				{{#if currentUser}}
-					{{#if isInRole 'ADMIN'}}
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{_  "comp.navBar.adminMenu.title"}}<span class="caret"></span></a>
+					{{#if isInRole 'CAN_ADMIN_USERS'}}
+						<li class="dropdown {{isActivePath regex='^/admin/'}}">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="admin"}} {{_  "comp.navBar.adminMenu.title"}}<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li class="{{isActivePath '/admin/users'}}"><a href="/admin/users">gérer les utilisateurs</a></li>
+								<li class="{{isActivePath '/admin/users'}}"><a href="/admin/users">{{_  "comp.navBar.adminMenu.usersManagement"}}</a></li>
 							</ul>
 						</li>
 					{{/if}}
-					{{#if isInRole 'DEV'}}
-					<li class="dropdown {{isActivePath regex='^/dev/'}}">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="dev"}} {{_  "comp.navBar.devMenu.title"}}<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="{{isActivePath '/dev/component_doc'}}"><a href="/dev/component_doc">{{_  "comp.navBar.devMenu.tplDoc"}}</a></li>
-						</ul>
-					</li>
+					{{#if isInRole 'CAN_USE_DEV_MENU'}}
+						<li class="dropdown {{isActivePath regex='^/dev/'}}">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="dev"}} {{_  "comp.navBar.devMenu.title"}}<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="{{isActivePath '/dev/component_doc'}}"><a href="/dev/component_doc">{{_  "comp.navBar.devMenu.tplDoc"}}</a></li>
+							</ul>
+						</li>
 					{{/if}}
 				{{/if}}
 				{{> loginButtons}}

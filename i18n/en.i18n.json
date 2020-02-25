@@ -2,7 +2,8 @@
 	"comp" : {
 		"navBar" : {
 			"adminMenu" :	{
-				"title" : "admin EN"
+				"title" : "admin",
+				"usersManagement" : "users management"
 			},
 			"devMenu" :	{
 				"title" : "development",

@@ -1,4 +1,5 @@
 import './routerPrevNext.html';
+import './routerPrevNext.css';
 import '../icon/icon.js';
 
 
