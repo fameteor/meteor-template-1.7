@@ -1,8 +1,8 @@
 import './icon.js';
 import '../../../startup/client/client_PARMS.js';
-import './icon_DOC.html';
+import './icon_comp_doc.html';
 
-Template.icon_DOC.helpers({
+Template.icon_comp_doc.helpers({
 	iconList() {
 		return Object.keys(client_PARMS && client_PARMS.icons);
 	},

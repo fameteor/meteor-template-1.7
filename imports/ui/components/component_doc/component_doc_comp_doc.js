@@ -1,9 +1,9 @@
 import '../icon/icon.js';
 import { component_docParms } from './component_docParms.js';
-import './component_doc_DOC.html';
+import './component_doc_comp_doc.html';
 
 
-Template.component_doc_DOC.helpers({
+Template.component_doc_comp_doc.helpers({
 	/*
 	iconList() {
 		return Object.keys(iconsList);
