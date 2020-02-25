@@ -18,8 +18,8 @@ Meteor.startup(() => {
 		
 	// Default users creation ------------------------------------
     const initialUsersList = [
-		{email:"admin@orange.com", 	password:"adminadmin",	alias: "ADMIN", roles:["ADMIN"], 	language : "fr"},
-		{email:"dev@orange.com", 	password:"devdev",	 	alias: "DEV",	roles:["DEV"], 		language : "en"},
+		{email:"admin@orange.com", 	password:"adminadmin",	alias: "ADMIN", roles:["ADMIN"], 			language : "fr"},
+		{email:"dev@orange.com", 	password:"devdev",	 	alias: "DEV",	roles:["ADMIN","DEV"], 		language : "en"},
 	];
 
 	if (Meteor.users.find().count() === 0) {

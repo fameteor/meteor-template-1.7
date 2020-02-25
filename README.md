@@ -49,7 +49,7 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 ## Bugs
 
-- All users publication when admin do not work ??
+- 
 
 
 ## Improvement

@@ -17,11 +17,9 @@
 			"connected":	"connected to the server",
 			"disconnected": "disconnected from the server"
 		},
-		"routerLogin": {
-			"msg":	"Login page"
-		},
 		"routerHome": {
-			"msg":	"Home page"
+			"msg":	"Home page",
+			"logInMsg": "Please log-in."
 		},
 		"routerNotFound": {
 			"msg":	"Page not found"

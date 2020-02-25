@@ -14,7 +14,6 @@ Meteor.startup(function () {
 	Tracker.autorun(function() {
 		var currentLanguage = Session.get("language");
 		TAPi18n.setLanguage(currentLanguage);
-		console.log('Language changed to : ' + currentLanguage);
 	});
 	// Run on login / logout
 	Tracker.autorun(function() {
@@ -27,14 +26,18 @@ Meteor.startup(function () {
 		}
 		// On logout
 		else {
-			
+			// We force the welcome screen (also log-in screen)
+			FlowRouter.go('/');
 		}
 	});
-	
+		
 	// -----------------------------------------
 	// Global helpers
 	UI.registerHelper('hlp_eq', function(a,b) {
 		return (a === b);
+	});
+	UI.registerHelper('hlp_sessionVar', function(name) {
+		return Session.get(name);
 	});
 	
 
