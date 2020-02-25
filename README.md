@@ -30,7 +30,7 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - [alanning:roles@1.2.16](https://github.com/Meteor-Community-Packages/meteor-roles/tree/v1) : `meteor add alanning:roles`
 
-- [Aldeed simpl-schema](https://github.com/aldeed/simple-schema-js) `meteor npm install --save simpl-schema`
+- [aldeed NPM simpl-schema](https://github.com/aldeed/simple-schema-js) `meteor npm install --save simpl-schema`
 
 - [aldeed:autoform@6.0.0](https://github.com/aldeed/meteor-autoform) : `meteor add aldeed:autoform@6.0.0`
 

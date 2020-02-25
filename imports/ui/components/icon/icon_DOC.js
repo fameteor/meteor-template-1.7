@@ -1,12 +1,12 @@
 import './icon.js';
-import { icons_PARMS } from './icons_PARMS.js';
+import '../../../startup/client/client_PARMS.js';
 import './icon_DOC.html';
 
 Template.icon_DOC.helpers({
 	iconList() {
-		return Object.keys(icons_PARMS);
+		return Object.keys(client_PARMS && client_PARMS.icons);
 	},
 	iconListJS() {
-		return JSON.stringify(icons_PARMS, null, 4);
+		return JSON.stringify(client_PARMS && client_PARMS.icons, null, 4);
 	}
 });
