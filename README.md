@@ -54,11 +54,7 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 ## Improvement
 
-- Mettre "chargement des données" dans la bonne langue.
-
 - Add Github version management
-
-- if user not logged, add redirect afterlogin in a session var to force the initial requested route.
 
 - User management to be added
 
@@ -73,8 +69,6 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 - Add a linter
 
 - Modify waiting template to be able to wait for multiple reasons, with multiple waiting messages (server ofline, data loading..)
-
-- Test new version of zimme:active-route for flow router and blaze.
 
 
 ## Upgrades : to do
