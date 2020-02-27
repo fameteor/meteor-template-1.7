@@ -15,6 +15,8 @@ client_PARMS = {
 		"disconnected" :	"fa fa-spinner fa-pulse",
 		"waiting" :			"fa fa-spinner fa-pulse",
 		"previous":			"fas fa-arrow-alt-circle-left",
-		"next":				"fas fa-arrow-alt-circle-right"
+		"next":				"fas fa-arrow-alt-circle-right",
+		"modify":			"glyphicon glyphicon-pencil",
+		"delete":			"glyphicon glyphicon-remove"
 	}
 };

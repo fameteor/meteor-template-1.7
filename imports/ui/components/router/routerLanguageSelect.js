@@ -10,7 +10,7 @@ Template.routerLanguageSelect.helpers({
 		return client_PARMS.languages;
 	},
 	i18nLanguageEntry(language) {
-		return "comp.routerLanguageSelect." + language;
+		return "client.client_PARMS.languages." + language;
 	},
 	selectedLanguage() {
 		return Session.get("language");

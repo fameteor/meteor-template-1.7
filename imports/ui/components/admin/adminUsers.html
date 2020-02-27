@@ -1,3 +1,66 @@
 <template name="adminUsers">
-	<h2>{{> icon name="admin"}} {{_ "comp.adminUsers.title"}}</h2>
+	{{#with usersList}}
+		<div class="row">
+			<div class="col-md-8" >
+				<h2>{{> icon name="admin"}} {{_ "comp.adminUsers.title"}} ({{hlp_count .}})</h2>
+			</div>
+			<div class="col-md-4" >
+				<br/>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "comp.adminUsers.addButton"}}</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" >
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>{{_ "comp.adminUsers.alias"}}</th>
+							<th>{{_ "comp.adminUsers.email"}}</th>
+							<th>{{_ "comp.adminUsers.lastConnection"}}</th>
+							<th>{{_ "comp.adminUsers.permissions"}}</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each .}}
+						<tr>
+							<td>
+								{{profile.alias}}<br/>
+								<small>({{_id}})</small>
+							</td>
+							<td>
+								{{email}}
+							</td>
+							<td>{{status.lastLogin.date}}</td>
+							<td>
+								<ul>
+									{{#each roles}}
+										<li>{{roleTranslation .}}</li>
+									{{/each}}
+								</ul>
+							</td>
+							<td>
+								<button class="modifyUser btn btn-warning" title="{{_ "comp.adminUsers.modifyButton"}}">{{> icon name="modify"}}</button>
+							</td>
+							<td>
+								<button class="deleteUser btn btn-danger" title="{{deleteButtonTitle}}" disabled="{{deleteButtonDisabled}}">{{> icon name="delete"}}</button>
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	{{else}}
+		<div class="row">
+			<div class="col-md-8" >
+				<h2>{{> icon name="admin"}} {{_ "comp.adminUsers.title"}} (0)</h2>
+			</div>
+			<div class="col-md-4" >
+				<br/>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "comp.adminUsers.addButton"}}</button>
+			</div>
+		</div>
+	{{/with}}
 </template>

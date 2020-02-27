@@ -1,5 +1,5 @@
 import '../icon/icon.js';
-import { component_docParms } from './component_docParms.js';
+import { component_doc_PARMS } from './component_doc_PARMS.js';
 import './component_doc_comp_doc.html';
 
 
@@ -9,7 +9,7 @@ Template.component_doc_comp_doc.helpers({
 		return Object.keys(iconsList);
 	},
 	*/
-	component_docParms() {
-		return JSON.stringify(component_docParms, null, 4);
+	component_doc_PARMS() {
+		return JSON.stringify(component_doc_PARMS, null, 4);
 	}
 });

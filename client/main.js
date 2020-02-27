@@ -53,6 +53,10 @@ Meteor.startup(function () {
 	UI.registerHelper('hlp_sessionVar', function(name) {
 		return Session.get(name);
 	});
+
+	UI.registerHelper('hlp_count', function (curseur) {
+		return curseur.length;
+	});
 	
 
   });

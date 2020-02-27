@@ -10,31 +10,61 @@
 				"tplDoc": "templates documentation"
 			}
 		},
-		"routerLanguageSelect" : {
-			"fr" :	"french",
-			"en" : 	"english"
-		},
 		"routerServerStatus": {
 			"connected":	"connected to the server",
 			"disconnected": "disconnected from the server"
 		},
 		"routerHome": {
-			"msg":	"Home page",
-			"logInMsg": "Please log-in."
+			"msg":	"home page",
+			"logInMsg": "please log-in."
 		},
 		"routerNotFound": {
-			"msg":	"Page not found"
+			"msg":	"page not found"
 		},
 		"routerPrevNext": {
 			"previous": "previous page",
 			"next": "next page"
 		},
 		"adminUsers": {
-			"title": "Users management"
+			"title": 				"users management",
+			"alias":				"alias",
+			"email":				"e-mail",
+			"lastConnection":		"last connection",
+			"permissions":			"permissions",
+			"addButton": 			"add a user",
+			"modifyButton": 		"modify a user",
+			"deleteButton": 		"delete a user",
+			"noSelfDeletionMsg":	"self deletion is impossible",
+			"noAdminDeletionMsg":	"admin deletion is impossible",
+			"deletionImpossibleMsg":"this user deletion is impossible"
 		}
 	},
 	
 	"client" : {
+		"client_PARMS" : {
+			"languages" : {
+				"fr" :	"french",
+				"en" : 	"english"
+			}
+		},
 		"dataLoadingMsg": "loading data"
+	},
+	
+	"both" : {
+		"both_PARMS" : {
+			"permissions" : {
+				"CAN_ADMIN_USERS":	"can manage users",
+				"CAN_USE_DEV_MENU":	"can access developper's menu"
+			}
+		}
+	},
+	
+	"server" : {
+		"server_PARMS" : {
+		
+		},
+		"error": {
+		
+		}
 	}
 }

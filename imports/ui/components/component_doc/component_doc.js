@@ -1,5 +1,5 @@
 import './component_doc.html';
-import { component_docParms } from './component_docParms.js';
+import { component_doc_PARMS } from './component_doc_PARMS.js';
 
 // Components docs import
 import './component_doc_comp_doc.js';
@@ -26,7 +26,7 @@ Template.component_doc.helpers({
 		return FlowRouter.getParam("suffix");
 	},
 	chaptersList() {
-		return component_docParms;
+		return component_doc_PARMS;
 	}
 });
 

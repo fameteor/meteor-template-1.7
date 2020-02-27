@@ -10,31 +10,61 @@
 				"tplDoc": "documentation des templates"
 			}
 		},
-		"routerLanguageSelect" : {
-			"fr" :	"français",
-			"en" : 	"anglais"
-		},
 		"routerServerStatus": {
 			"connected":	"connecté au serveur",
 			"disconnected": "déconnecté du serveur"
 		},
 		"routerHome": {
-			"msg":	"Page d'accueil",
-			"logInMsg": "Merci de vous connecter."
+			"msg":	"page d'accueil",
+			"logInMsg": "merci de vous connecter."
 		},
 		"routerNotFound": {
-			"msg":	"Page non trouvée"
+			"msg":	"page non trouvée"
 		},
 		"routerPrevNext": {
 			"previous": "page précédente",
 			"next": "page suivante"
 		},
 		"adminUsers": {
-			"title": "Gestion des utilisateurs"
+			"title": 				"gestion des utilisateurs",
+			"alias":				"alias",
+			"email":				"e-mail",
+			"lastConnection":		"dernière connexion",
+			"permissions":			"permissions",
+			"addButton": 			"ajouter un utilisateur",
+			"modifyButton": 		"modifier un utilisateur",
+			"deleteButton": 		"supprimer un utilisateur",
+			"noSelfDeletionMsg":	"impossible de se supprimer soi-même",
+			"noAdminDeletionMsg":	"impossible de supprimer l'administrateur",
+			"deletionImpossibleMsg":"impossible de supprimer cet utilisateur"
 		}
 	},
 	
 	"client" : {
-		"dataLoadingMsg": "chargement des données"
+		"client_PARMS" : {
+			"languages" : {
+				"fr" :	"français",
+				"en" : 	"anglais"
+			}
+		},
+		"dataLoadingMsg": "loading data"
+	},
+	
+	"both" : {
+		"both_PARMS" : {
+			"permissions" : {
+				"CAN_ADMIN_USERS":	"peut gérer les utilisateurs",
+				"CAN_USE_DEV_MENU":	"accède au menu développeur"
+			}
+		}
+	},
+	
+	"server" : {
+		"server_PARMS" : {
+		
+		},
+		"error": {
+		
+		}
 	}
 }

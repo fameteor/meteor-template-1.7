@@ -4,7 +4,7 @@
 
 ## Default users and roles creation
 
-The file `imports/startup/server/fixtures.js` initialises the default roles `["DEV","ADMIN"]` and the defaut users `admin@orange.com` (password : `adminadmin`) and `dev@orange.com` (password : `devdev`).
+The file `imports/startup/server/fixtures.js` initialises the defaut users `admin@orange.com` (password : `adminadmin`) and `dev@orange.com` (password : `devdev`).
 
 ### navBar
 
@@ -49,7 +49,7 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 ## Bugs
 
-- When unkwown route go to home page. (Reload thus Roles not loaded). Should be corrected when redirect after loging.
+- 
 
 
 ## Improvement
@@ -64,13 +64,29 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 - `stylus` deprecated
 
+- modify the hlp_count to deal with both arrays and cursors
+
+- translate date in user management with moment in the right languageSelect
+
+- Language support I18n files : where to put client.dataLoadingMsg in client.main.dataLoadingMsg ?
+
+- pointing object detection to be implemented, user mgmt to be then modified
+
+- replace bootstrap icons delete and modify with fontawesome one
+
 - Ajouter un usefull helpers mis à jour !
 
 - Add a linter
 
 - Modify waiting template to be able to wait for multiple reasons, with multiple waiting messages (server ofline, data loading..)
 
+- Shall we route to an "non allowed access" page if access is non allowed ?
+
+- Add waiting popup option when offline
+
+- create user and send e-mail to him instead of setting the password
+
 
 ## Upgrades : to do
 
-- Allaning role 3 : change the default users and default roles creation code (depending on mongo version).
+- Allaning role 3 : change the default users and default roles creation code (depending on mongo version and meteor version).

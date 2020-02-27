@@ -1,6 +1,7 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Session } from 'meteor/session';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { routes_PARMS } from './routes_PARMS.js';
 
 // Import needed templates
 import '../../ui/layouts/body/body.js';
@@ -8,14 +9,6 @@ import '../../ui/components/admin/adminUsers.js';
 import '../../ui/components/router/routerHome.js';
 import '../../ui/components/router/routerNotFound.js';
 import '../../ui/components/component_doc/component_doc.js';
-
-// ROUTES DEFINITION -----------------------------------------
-const routesList = [
-	{path: '/', 											mainTpl: 	'routerHome', 		permissions: null},
-	{path: '/admin/users', 									mainTpl: 	'adminUsers', 		permissions: ["CAN_ADMIN_USERS"]},
-	{path: '/dev/component_doc', 							mainTpl: 	'component_doc', 	permissions: ["CAN_USE_DEV_MENU"]},
-	{path: '/dev/component_doc/:componentName/:suffix', 	mainTpl: 	'component_doc', 	permissions: ["CAN_USE_DEV_MENU"]}
-];
 
 // Session variables -----------------------------------------
 Session.setDefault("waitingStatus", true);
@@ -50,7 +43,7 @@ Tracker.autorun(function() {
 // ROUTES CHECK FOR PERMISSIONS ------------------------------
 
 var permissionsControl = function() {
-	const currentRouteParms = routesList.find(function(route) {
+	const currentRouteParms = routes_PARMS.find(function(route) {
 		return route.path === FlowRouter.current().route.pathDef;
 	});
 	// If logged in, check for permissions
@@ -93,7 +86,7 @@ FlowRouter.triggers.enter([permissionsControl,routesLogging]);
 
 // ROUTES SETUP ----------------------------------------------
 // Set up all routes in the app
-routesList.forEach(function(route) {
+routes_PARMS.forEach(function(route) {
 	FlowRouter.route(
 		route.path, 
 		{
