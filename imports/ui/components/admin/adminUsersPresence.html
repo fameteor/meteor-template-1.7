@@ -1,0 +1,9 @@
+<template name="adminUsersPresence">
+	{{#with user}}
+		{{#if connectedUser}}
+			<span class="text-success" title="{{_ "comp.adminUsersPresence.connectedUser"}}">{{> icon name="connectedUser"}}</span>
+		{{else}}
+			<span class="text-muted" title="{{_ "comp.adminUsersPresence.nonConnectedUser"}}">{{> icon name="nonConnectedUser"}}</span>
+		{{/if}}
+	{{/with}}
+</template>

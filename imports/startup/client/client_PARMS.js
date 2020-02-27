@@ -17,6 +17,8 @@ client_PARMS = {
 		"previous":			"fas fa-arrow-alt-circle-left",
 		"next":				"fas fa-arrow-alt-circle-right",
 		"modify":			"glyphicon glyphicon-pencil",
-		"delete":			"glyphicon glyphicon-remove"
+		"delete":			"glyphicon glyphicon-remove",
+		"connectedUser":	"fas fa-user",
+		"nonConnectedUser":	"fas fa-user-slash"
 	}
 };

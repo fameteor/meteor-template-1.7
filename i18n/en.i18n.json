@@ -37,6 +37,10 @@
 			"noSelfDeletionMsg":	"self deletion is impossible",
 			"noAdminDeletionMsg":	"admin deletion is impossible",
 			"deletionImpossibleMsg":"this user deletion is impossible"
+		},
+		"adminUsersPresence" : {
+			"connectedUser": 		"connected user",
+			"nonConnectedUser": 	"disconnected user"
 		}
 	},
 	

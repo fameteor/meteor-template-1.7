@@ -26,8 +26,11 @@
 						{{#each .}}
 						<tr>
 							<td>
-								{{profile.alias}}<br/>
-								<small>({{_id}})</small>
+								{{> adminUsersPresence user=.}} {{profile.alias}}
+								{{#if isInRole 'CAN_USE_DEV_MENU'}}
+									<br/>
+									<small>({{_id}})</small>
+								{{/if}}
 							</td>
 							<td>
 								{{email}}
