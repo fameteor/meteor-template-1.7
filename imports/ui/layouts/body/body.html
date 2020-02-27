@@ -10,7 +10,7 @@
 	{{#if hlp_sessionVar 'waitingStatus'}}
 		<div class="body-waiting-container">
 			<div class="body-waiting-msg-container">
-				<h2>{{ hlp_sessionVar "waitingMsg"}}</h2>
+				<h2>{{_ (hlp_sessionVar "waitingMsg")}}</h2>
 				<h2>{{> icon name="waiting"}}</h2>
 			</div>
 		</div>

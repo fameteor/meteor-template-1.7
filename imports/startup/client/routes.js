@@ -17,10 +17,25 @@ const routesList = [
 	{path: '/dev/component_doc/:componentName/:suffix', 	mainTpl: 	'component_doc', 	permissions: ["CAN_USE_DEV_MENU"]}
 ];
 
-// GLOBAL SUBSCRIPTIONS --------------------------------------
+// Session variables -----------------------------------------
 Session.setDefault("waitingStatus", true);
-Session.setDefault("waitingMsg", "chargement des données");
+Session.setDefault("waitingMsg", "client.dataLoadingMsg");
+Session.setDefault("rerouteAfterLogin", null);
 
+
+// FlowRouter defered initialisation when Roles publication OK
+// -----------------------------------------------------------
+FlowRouter.wait();
+
+Tracker.autorun(function() {
+	// Wair for roles to initialize
+	if (Roles.subscription.ready() && !FlowRouter._initialized) {
+		console.log("FlowRouter initialisation")
+		FlowRouter.initialize();
+	}
+});
+
+// GLOBAL SUBSCRIPTIONS --------------------------------------
 // Global subscriptions
 FlowRouter.subscriptions = function(params, queryparams) {
 	this.register('users.meOrAllForAdmin', Meteor.subscribe('users.meOrAllForAdmin'));
@@ -38,18 +53,27 @@ var permissionsControl = function() {
 	const currentRouteParms = routesList.find(function(route) {
 		return route.path === FlowRouter.current().route.pathDef;
 	});
-	if (currentRouteParms) {
-		if (currentRouteParms.permissions) {
-			if (!Roles.userIsInRole(Meteor.userId(),currentRouteParms.permissions)) {
-				console.error("Unauthorised access to " + FlowRouter.current().route.pathDef);
-				FlowRouter.go('/');
+	// If logged in, check for permissions
+	if (Meteor.userId()) {
+		if (currentRouteParms) {
+			if (currentRouteParms.permissions) {
+				if (!Roles.userIsInRole(Meteor.userId(),currentRouteParms.permissions)) {
+					console.error("Unauthorised access to " + FlowRouter.current().route.pathDef);
+					FlowRouter.go('/');
+				}
+				else return true;
 			}
 			else return true;
 		}
-		else return true;
+		else {
+			console.error("No route parm fits for " + FlowRouter.current().route.pathDef);
+			FlowRouter.go('/');
+		}
 	}
+	// If not logged in and if no reroute set, route to / with reroute on logging to requested URL
 	else {
-		console.error("Unauthorised access to " + FlowRouter.current().route.pathDef + " (No route parm fits.)");
+		if (!Session.get("rerouteAfterLogin")) Session.set("rerouteAfterLogin",FlowRouter.current().path);
+		console.log(Session.get("rerouteAfterLogin"));
 		FlowRouter.go('/');
 	}
 }

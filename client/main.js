@@ -8,7 +8,8 @@ import '/imports/startup/both';
 // i18n initialisation
 
 Meteor.startup(function () {
-	
+	// To avoid logout
+	let initialisationState = true; 
 	// Set the language
 	Session.setDefault("language", client_PARMS.defaultLanguage);
 	// Set and reset the language anytime it is changed
@@ -21,17 +22,28 @@ Meteor.startup(function () {
 	Tracker.autorun(function() {
 		// On login
 		if (Meteor.user()) {
+			// Set the language
 			if (	Meteor.user().profile
 					&& Meteor.user().profile.language) {
 				Session.set("language", Meteor.user().profile.language);
+			}
+			// Reroute to initial requested route if set
+			if (Session.get("rerouteAfterLogin")) {
+				FlowRouter.go(Session.get("rerouteAfterLogin"));
+				Session.set("rerouteAfterLogin", null);
+				console.log("end reroute");
 			}
 		}
 		// On logout
 		else {
 			// We force the welcome screen (also log-in screen)
-			FlowRouter.go('/');
+			if (!initialisationState) {
+				console.log("logout and route to /")
+				FlowRouter.go('/');
+			}
 		}
 	});
+	initialisationState = false; 
 		
 	// -----------------------------------------
 	// Global helpers

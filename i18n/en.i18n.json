@@ -32,5 +32,9 @@
 		"adminUsers": {
 			"title": "Users management"
 		}
+	},
+	
+	"client" : {
+		"dataLoadingMsg": "loading data"
 	}
 }

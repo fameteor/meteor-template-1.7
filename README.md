@@ -49,10 +49,12 @@ The file `imports/startup/server/fixtures.js` initialises the default roles `["D
 
 ## Bugs
 
-- 
+- When unkwown route go to home page. (Reload thus Roles not loaded). Should be corrected when redirect after loging.
 
 
 ## Improvement
+
+- Mettre "chargement des données" dans la bonne langue.
 
 - Add Github version management
 
