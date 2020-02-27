@@ -4,17 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
 
 Meteor.startup(() => {
-	// Default ROLES creation ------------------------------------
-	const rolesList = [
-		"ADMIN",
-		"DEV"
-	];
-	
-	/* next version of alanning roles (not supported with that mongo version)
-	rolesList.forEach(function(role) {
-		Roles.createRole(role, {unlessExists: true});
-	});
-	*/
 		
 	// Default users creation ------------------------------------
     const initialUsersList = [

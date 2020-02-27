@@ -72,9 +72,11 @@ var permissionsControl = function() {
 	}
 	// If not logged in and if no reroute set, route to / with reroute on logging to requested URL
 	else {
-		if (!Session.get("rerouteAfterLogin")) Session.set("rerouteAfterLogin",FlowRouter.current().path);
-		console.log(Session.get("rerouteAfterLogin"));
-		FlowRouter.go('/');
+		if (!Session.get("rerouteAfterLogin") && FlowRouter.current().path != "/") {
+			Session.set("rerouteAfterLogin",FlowRouter.current().path);
+			console.log("Reroute after login set to : " + Session.get("rerouteAfterLogin"));
+			FlowRouter.go('/');
+		}
 	}
 }
 

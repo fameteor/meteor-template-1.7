@@ -31,14 +31,14 @@ Meteor.startup(function () {
 			if (Session.get("rerouteAfterLogin")) {
 				FlowRouter.go(Session.get("rerouteAfterLogin"));
 				Session.set("rerouteAfterLogin", null);
-				console.log("end reroute");
+				console.log("Reroute executed");
 			}
 		}
 		// On logout
 		else {
 			// We force the welcome screen (also log-in screen)
 			if (!initialisationState) {
-				console.log("logout and route to /")
+				console.log("Logout and route to /")
 				FlowRouter.go('/');
 			}
 		}
