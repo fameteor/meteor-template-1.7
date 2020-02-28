@@ -38,7 +38,7 @@
 			"noAdminDeletionMsg":	"impossible de supprimer l'administrateur",
 			"deletionImpossibleMsg":"impossible de supprimer cet utilisateur"
 		},
-		"adminUsersPresence" : {
+		"presence" : {
 			"connectedUser": 		"utilisateur connecté",
 			"nonConnectedUser": 	"utilisateur non connecté"
 		}

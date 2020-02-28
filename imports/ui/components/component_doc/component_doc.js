@@ -4,7 +4,8 @@ import { component_doc_PARMS } from './component_doc_PARMS.js';
 // Components docs import
 import './component_doc_comp_doc.js';
 import '../icon/icon_comp_doc.js';
-import '../router/routerLanguageSelect_comp_doc.js';
+import '../router/routerLanguageSelect_DOC.js';
+import '../presence/presence_DOC.js';
 
 Template.component_doc.helpers({
 	componentsList(suffix) {
@@ -14,6 +15,8 @@ Template.component_doc.helpers({
 		Object.keys(Template).map(function(key) {
 			if (key.endsWith(suffix)) componentsList.push(key.slice(0, key.length - suffix.length))
 		});
+		// We order in alphabetical order
+		componentsList.sort();
 		return componentsList;
 	},
 	selectedDocTemplateName() {

@@ -1,5 +1,5 @@
 import './adminUsers.html';
-import './adminUsersPresence.js';
+import '../presence/presence.js';
 
 Template.adminUsers.helpers({
 	usersList() {

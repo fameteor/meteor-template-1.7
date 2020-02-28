@@ -1,7 +1,7 @@
 import './routerLanguageSelect.js';
-import './routerLanguageSelect_comp_doc.html';
+import './routerLanguageSelect_DOC.html';
 
-Template.routerLanguageSelect_comp_doc.helpers({
+Template.routerLanguageSelect_DOC.helpers({
 	/*
 	iconList() {
 		return Object.keys(icons_PARMS);

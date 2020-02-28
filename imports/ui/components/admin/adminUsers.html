@@ -26,7 +26,7 @@
 						{{#each .}}
 						<tr>
 							<td>
-								{{> adminUsersPresence user=.}} {{profile.alias}}
+								{{> presence user=.}} {{profile.alias}}
 								{{#if isInRole 'CAN_USE_DEV_MENU'}}
 									<br/>
 									<small>({{_id}})</small>
