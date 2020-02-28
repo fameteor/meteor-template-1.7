@@ -38,6 +38,22 @@
 			"noAdminDeletionMsg":	"impossible de supprimer l'administrateur",
 			"deletionImpossibleMsg":"impossible de supprimer cet utilisateur"
 		},
+		"adminUsersEditModal": {
+			"addTitle":				"ajout d'un utilisateur",
+			"modifyTitle":			"modification d'un utilisateur",
+			"deleteTitle":			"suppression d'un utilisateur",
+			"addButton":			"ajouter",
+			"modifyButton":			"modifier",
+			"deleteButton":			"supprimer",
+			"cancelButton":			"annuler",
+			"deleteMsg":			"<strong>Attention, vous allez supprimer définitivement l'utilisateur <code>%s</code></strong>, voulez-vous continuer ?",
+			"insertSuccessMsg":		"utilisateur ajouté",
+			"insertErrorMsg":		"impossible d'ajouter cet utilisateur : ",
+			"modifySuccessMsg":		"utilisateur modifié",
+			"modifyErrorMsg":		"impossible de modifier cet utilisateur : ",
+			"deleteSuccessMsg":		"utilisateur supprimé",
+			"deleteErrorMsg":		"impossible de supprimer cet utilisateur : "
+		},
 		"presence" : {
 			"connectedUser": 		"utilisateur connecté",
 			"nonConnectedUser": 	"utilisateur non connecté"
@@ -60,6 +76,14 @@
 				"CAN_ADMIN_USERS":	"peut gérer les utilisateurs",
 				"CAN_USE_DEV_MENU":	"accède au menu développeur"
 			}
+		},
+		"schemas": {
+			"userForm" : {
+				"alias": 		"alias",
+				"email": 		"e-mail",
+				"password": 	"mot de passe",
+				"roles":		"permissions"
+			}
 		}
 	},
 	
@@ -68,7 +92,14 @@
 		
 		},
 		"error": {
-		
+			"mongoInsertionFailure": 	"échec de l'opération d'insertion Mongo",
+			"notAllowedToCreateUser": 	"vous n'avez pas les droits pour créer un utilisateur",
+			"notAllowedToDeleteUser":	"vous n'avec pas les droits pour supprimer un utilisateur",
+			"userDoesNotExist":			"cet utilisateur n'existe pas",
+			"adminCannotBeDeleted":		"l'administrateur principal ne peut pas être supprimé",
+			"selfDeletionNotAllowed":	"un utilisateur ne peut pas s'enlever lui même",
+			"linksExistForThisUser":	"des liens existent pour cet utilisateur",
+			"notAllowedToModifyUser":	"vous n'avez pas les droits pour modifier un utilisateur"
 		}
 	}
 }

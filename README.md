@@ -64,8 +64,6 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - `stylus` deprecated
 
-- modify the hlp_count to deal with both arrays and cursors
-
 - translate date in user management with moment in the right languageSelect
 
 - Language support I18n files : where to put client.dataLoadingMsg in client.main.dataLoadingMsg ?
@@ -85,6 +83,14 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 - Add waiting popup option when offline
 
 - create user and send e-mail to him instead of setting the password
+
+- users management : make impossible to change mail, role or alias of main admin. A user cannot change its own roles
+
+- users management : use localized moment
+
+- users management : make automatic tests
+
+- user management : put ADMIN creation independantly in order not to have any modification !
 
 
 ## Upgrades : to do

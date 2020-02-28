@@ -1,5 +1,6 @@
 import './adminUsers.html';
 import '../presence/presence.js';
+import './adminUsersEditModal.js';
 
 Template.adminUsers.helpers({
 	usersList() {
@@ -45,4 +46,21 @@ Template.adminUsers.helpers({
 		}
 		else return "disabled";
 	},
+});
+
+
+Template.adminUsers.events({
+	'click #addUser'(e,tpl){
+		e.preventDefault();
+		Modal.show("adminUsersEditModal",{action:"INSERT"},{backdrop:'static',keyboard:false});
+	},
+	'click .modifyUser'(e,tpl){
+		e.preventDefault();
+		// !!!!!! Workaround : we need to JSON stringify the doc to pass it. Why ????
+		Modal.show("adminUsersEditModal",{action:"UPDATE","doc":JSON.stringify(this)},{backdrop:'static',keyboard:false});
+	},
+	'click .deleteUser'(e,tpl){
+		e.preventDefault();
+		Modal.show("adminUsersEditModal",{action:"DELETE","doc":this},{backdrop:'static',keyboard:false});
+	}
 });

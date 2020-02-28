@@ -53,9 +53,50 @@ Meteor.startup(function () {
 	UI.registerHelper('hlp_sessionVar', function(name) {
 		return Session.get(name);
 	});
-
-	UI.registerHelper('hlp_count', function (curseur) {
-		return curseur.length;
+	
+	let hlp_count = function(element) {
+		if (Array.isArray(element)) return element.length;
+		else if (element instanceof Mongo.Collection.Cursor) return element.count();
+	};
+	UI.registerHelper('hlp_count', hlp_count);
+	
+	// ----------------------------------------
+	// AUTOFORM hooks -------------------------
+	AutoForm.hooks({
+		// For the users
+		// ==============================================
+		"insertUserForm" : {
+			// Called when any submit operation succeeds
+			onSuccess: function(formType, result) {
+				// We close the popup
+				$('.modal').modal('hide');
+				// On affiche la popup success
+				toastr.success(TAPi18n.__("comp.adminUsersEditModal.insertSuccessMsg"));
+			},
+			// Called when any submit operation fails
+			onError: function(formType, error) {
+				// We close the popup
+				$('.modal').modal('hide');
+				// On affiche la popup erreur
+				toastr.warning(TAPi18n.__("comp.adminUsersEditModal.insertErrorMsg") + TAPi18n.__(error.reason));
+			}
+		},
+		"modifyUserForm" : {
+			// Called when any submit operation succeeds
+			onSuccess: function(formType, result) {
+				// On ferme la popup
+				$('.modal').modal('hide');
+				// On affiche la popup success
+				toastr.success(TAPi18n.__("comp.adminUsersEditModal.modifySuccessMsg"));
+			},
+			// Called when any submit operation fails
+			onError: function(formType, error) {
+				// We close the popup
+				$('.modal').modal('hide');
+				// On affiche la popup erreur
+				toastr.warning(TAPi18n.__("comp.adminUsersEditModal.modifyErrorMsg") + TAPi18n.__(error.reason));
+			}
+		},
 	});
 	
 
