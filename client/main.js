@@ -4,6 +4,8 @@ import { Session } from 'meteor/session'
 import '/imports/startup/client';
 import '/imports/startup/both';
 
+import '../imports/startup/both/schemas.js';
+
 
 // i18n initialisation
 
@@ -16,7 +18,17 @@ Meteor.startup(function () {
 	Tracker.autorun(function() {
 		var currentLanguage = Session.get("language");
 		TAPi18n.setLanguage(currentLanguage);
+		// Change the language for the login UI
 		accountsUIBootstrap3.setLanguage(currentLanguage);
+		
+		// ???????????????????????????????????????
+		// To be optimized
+		// ???????????????????????????????????????
+		
+		// We change the languages for all schemas
+		Object.keys(schemas).forEach(function(value) {
+			schemas[value].messageBox.language = currentLanguage;
+		});
 	});
 	// Run on login / logout
 	Tracker.autorun(function() {

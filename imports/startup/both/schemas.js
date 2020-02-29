@@ -1,12 +1,14 @@
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
-
+import { schemas_languageInitialisation } from './schemas_languageInitialisation.js';
 import { both_PARMS, both_PARMS_optionsList } from './both_PARMS.js';
 
+// Initialisation ------------------------------------------------------------
+schemas_languageInitialisation(SimpleSchema);
 SimpleSchema.extendOptions(['autoform']);
-
 schemas = {};
 
+// Schemas definitions -------------------------------------------------------
 schemas.userForm = new SimpleSchema({
 	"alias":  {
 		type: String,

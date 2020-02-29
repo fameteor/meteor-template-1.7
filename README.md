@@ -92,6 +92,8 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - user management : put ADMIN creation independantly in order not to have any modification !
 
+- user management : if form is not correct, the form is sent to the server (it should not be), and we get the form errors messages only when you click again on "create a new user"
+
 
 ## Upgrades : to do
 
