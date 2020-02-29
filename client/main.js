@@ -82,31 +82,31 @@ Meteor.startup(function () {
 			onSuccess: function(formType, result) {
 				// We close the popup
 				$('.modal').modal('hide');
-				// On affiche la popup success
+				// We display the success popup
 				toastr.success(TAPi18n.__("comp.adminUsersEditModal.insertSuccessMsg"));
 			},
 			// Called when any submit operation fails
 			onError: function(formType, error) {
-				// We close the popup
-				$('.modal').modal('hide');
-				// On affiche la popup erreur
-				toastr.warning(TAPi18n.__("comp.adminUsersEditModal.insertErrorMsg") + TAPi18n.__(error.reason));
+				// We display the error popup
+				// If server error, a reason must exist
+				if (error.reason) toastr.warning(TAPi18n.__("comp.adminUsersEditModal.insertErrorMsg") + TAPi18n.__(error.reason));
+				else toastr.warning(TAPi18n.__("comp.adminUsersEditModal.insertErrorMsg") + error);
 			}
 		},
 		"modifyUserForm" : {
 			// Called when any submit operation succeeds
 			onSuccess: function(formType, result) {
-				// On ferme la popup
+				// We close the popup
 				$('.modal').modal('hide');
-				// On affiche la popup success
+				// We display the success popup
 				toastr.success(TAPi18n.__("comp.adminUsersEditModal.modifySuccessMsg"));
 			},
 			// Called when any submit operation fails
 			onError: function(formType, error) {
-				// We close the popup
-				$('.modal').modal('hide');
-				// On affiche la popup erreur
-				toastr.warning(TAPi18n.__("comp.adminUsersEditModal.modifyErrorMsg") + TAPi18n.__(error.reason));
+				// We display the error popup
+				// If server error, a reason must exist
+				if (error.reason)  toastr.warning(TAPi18n.__("comp.adminUsersEditModal.modifyErrorMsg") + TAPi18n.__(error.reason));
+				else toastr.warning(TAPi18n.__("comp.adminUsersEditModal.modifyErrorMsg") + error);
 			}
 		},
 	});

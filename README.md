@@ -92,7 +92,11 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - user management : put ADMIN creation independantly in order not to have any modification !
 
-- user management : if form is not correct, the form is sent to the server (it should not be), and we get the form errors messages only when you click again on "create a new user"
+- user management : if form is not correct, the form is sent to the server (it should not be), and we get a form errors messages o
+
+- user management : add "check" in server's method
+
+- user management : insertUserForm autohook form : better management of other error without reasons or non translated codes. Use error.code instead of error.reason ?
 
 
 ## Upgrades : to do
