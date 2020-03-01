@@ -23,6 +23,7 @@
 							<th>mandatory</th>
 							<th>auto value</th>
 							<th>allowed values</th>
+							<th>links</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -34,6 +35,16 @@
 							<td>{{{mandatory}}}</td>
 							<td class="text-center">{{#if autovalue}}{{> icon name="schemaAutovalue"}}{{else}}-{{/if}}</td>
 							<td>{{{allowedValues}}}</td>
+							<td>
+								{{#with link}}
+								<ul>
+									<li>collection : <code>{{collection}}</code></li>
+									<li>type : <code>{{linkType}}</code></li>
+								</ul>
+								{{else}}
+									-
+								{{/with}}
+							</td>
 						</tr>
 						{{/each}}
 					</tbody>

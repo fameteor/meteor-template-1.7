@@ -2,10 +2,11 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 import { schemas_languageInitialisation } from './schemas_languageInitialisation.js';
 import { both_PARMS, both_PARMS_optionsList } from './both_PARMS.js';
+import { Links } from '../../api/links/links.js';
 
 // Initialisation ------------------------------------------------------------
 schemas_languageInitialisation(SimpleSchema);
-SimpleSchema.extendOptions(['autoform']);
+SimpleSchema.extendOptions(['autoform','link']);
 schemas = {};
 
 // Schemas definitions -------------------------------------------------------
@@ -62,6 +63,10 @@ schemas.essai = new SimpleSchema({
 		label: "essai",
 		autoform: {
 			autocomplete: "off"
+		},
+		link: {
+			collection:	Links,
+			linkType: 	"ID"
 		},
 		optional: 	false,
 	},

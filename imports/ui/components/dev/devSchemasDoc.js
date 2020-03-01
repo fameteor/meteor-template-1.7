@@ -68,6 +68,14 @@ Template.devSchemasDoc.helpers({
 	},
 	autovalue() {
 		return this.value.autoValue;
+	},
+	link() {
+		if (this.value && this.value.link) {
+			return {
+				collection:	this.value.link.collection && this.value.link.collection._name,
+				linkType:	this.value.link.linkType
+			}
+		}
 	}
 });
 

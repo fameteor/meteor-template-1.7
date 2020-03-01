@@ -88,6 +88,8 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - !!! When add route in routes_PARMS we need to import the component in route.js !!
 
+- !!! Should we pt a "S" to schemas variable ?
+
 - users management : use localized moment
 
 - users management : make automatic tests
