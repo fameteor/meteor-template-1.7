@@ -9,6 +9,7 @@ import '../../ui/components/admin/adminUsers.js';
 import '../../ui/components/router/routerHome.js';
 import '../../ui/components/router/routerNotFound.js';
 import '../../ui/components/component_doc/component_doc.js';
+import '../../ui/components/dev/devSchemasDoc.js';
 
 // Session variables -----------------------------------------
 Session.setDefault("waitingStatus", true);

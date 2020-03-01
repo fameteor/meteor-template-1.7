@@ -19,6 +19,7 @@ client_PARMS = {
 		"modify":			"glyphicon glyphicon-pencil",
 		"delete":			"glyphicon glyphicon-remove",
 		"connectedUser":	"fas fa-user",
-		"nonConnectedUser":	"fas fa-user-slash"
+		"nonConnectedUser":	"fas fa-user-slash",
+		"schemaAutovalue":	"fa fa-cog fa-spin"
 	}
 };

@@ -52,4 +52,19 @@ schemas.userForm = new SimpleSchema({
 		allowedValues: both_PARMS.permissions,
 		optional: 	true,
 	}	
-},{tracker:Tracker})
+},{tracker:Tracker});
+
+
+
+schemas.essai = new SimpleSchema({
+	"alias":  {
+		type: String,
+		label: "essai",
+		autoform: {
+			autocomplete: "off"
+		},
+		optional: 	false,
+	},
+},{tracker:Tracker});
+
+	

@@ -6,8 +6,9 @@
 				"usersManagement" : "users management"
 			},
 			"devMenu" :	{
-				"title" : "dev",
-				"tplDoc": "templates documentation"
+				"title" : 		"dev",
+				"tplDoc": 		"templates documentation",
+				"schemasDoc":	"data schemas"
 			}
 		},
 		"routerServerStatus": {

@@ -84,7 +84,9 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - create user and send e-mail to him instead of setting the password
 
-- users management : make impossible to change mail, role or alias of main admin. A user cannot change its own roles
+- !!! users management : make impossible to change mail, role or alias of main admin. A user cannot change its own roles
+
+- !!! When add route in routes_PARMS we need to import the component in route.js !!
 
 - users management : use localized moment
 
