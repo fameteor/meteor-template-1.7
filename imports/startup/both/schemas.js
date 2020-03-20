@@ -52,7 +52,7 @@ schemas.userForm = new SimpleSchema({
 		label: function() { return TAPi18n.__("both.schemas.userForm.roles");},
 		allowedValues: both_PARMS.permissions,
 		optional: 	true,
-	}	
+	}
 },{tracker:Tracker});
 
 
@@ -70,6 +70,18 @@ schemas.essai = new SimpleSchema({
 		},
 		optional: 	false,
 	},
+	"createdAt": {
+		type: Date,
+		autoValue: function() {
+			if (this.isInsert) {
+				return new Date();
+			} else if (this.isUpsert) {
+				return {$setOnInsert: new Date()};
+			} else {
+				this.unset();  // Prevent user from supplying their own value
+			}
+		}
+	}
 },{tracker:Tracker});
 
 	

@@ -90,6 +90,10 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 - !!! Should we pt a "S" to schemas variable ?
 
+- !!! Bug autovalue on schemasDoc
+
+- Add a schema on the user collection (see example in collection2) ?
+
 - users management : use localized moment
 
 - users management : make automatic tests

@@ -67,7 +67,7 @@ Template.devSchemasDoc.helpers({
 		else						return "<span class='text-success'>OPTIONAL</span>";
 	},
 	autovalue() {
-		return this.value.autoValue;
+		return ("autoValue" in this.value);
 	},
 	link() {
 		if (this.value && this.value.link) {
