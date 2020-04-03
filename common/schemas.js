@@ -64,7 +64,7 @@ schemas = {};
 schemas.userForm = new SimpleSchema({
 	"alias":  {
 		type: String,
-		label: function() { return TAPi18n.__("both.schemas.userForm.alias");},
+		label: function() { return TAPi18n.__("schemas.userForm.alias");},
 		autoform: {
 			autocomplete: "off"
 		},
@@ -73,7 +73,7 @@ schemas.userForm = new SimpleSchema({
     "email": {
 		type: String,
 		regEx: SimpleSchema.RegEx.Email,
-		label: function() { return TAPi18n.__("both.schemas.userForm.email");},
+		label: function() { return TAPi18n.__("schemas.userForm.email");},
 		autoform: {
 			autocomplete: "off"
 		},
@@ -81,7 +81,7 @@ schemas.userForm = new SimpleSchema({
 	},
     "password": {
 		type: String,
-		label: function() { return TAPi18n.__("both.schemas.userForm.password");},
+		label: function() { return TAPi18n.__("schemas.userForm.password");},
 		min: 6,
 		autoform: {
 			autocomplete: "off",
@@ -91,17 +91,17 @@ schemas.userForm = new SimpleSchema({
 	},
 	"roles": {
 		type: Array,
-		label: function() { return TAPi18n.__("both.schemas.userForm.roles");},
+		label: function() { return TAPi18n.__("schemas.userForm.roles");},
 		autoform: {
 			type: 'select-checkbox',
-			options:  function() {return both_PARMS_optionsList("permissions")},
+			options:  function() {return common_PARMS_optionsList("permissions")},
 		},
 		optional: 	true,
 	},
 	"roles.$": {
 		type:	 	String,
-		label: function() { return TAPi18n.__("both.schemas.userForm.roles");},
-		allowedValues: both_PARMS.permissions,
+		label: function() { return TAPi18n.__("schemas.userForm.roles");},
+		allowedValues: common_PARMS.permissions,
 		optional: 	true,
 	}
 },{tracker:Tracker});

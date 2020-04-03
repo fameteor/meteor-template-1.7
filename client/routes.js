@@ -4,7 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 // Session variables -----------------------------------------
 Session.setDefault("waitingStatus", true);
-Session.setDefault("waitingMsg", "client.dataLoadingMsg");
+Session.setDefault("waitingMsg", "routerLayout.dataLoadingMsg");
 Session.setDefault("rerouteAfterLogin", null);
 
 

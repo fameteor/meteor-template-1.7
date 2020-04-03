@@ -49,7 +49,7 @@ The file `imports/startup/server/fixtures.js` initialises the defaut users `admi
 
 ## Bugs
 
-- 
+- Bug (very low impact) in TAP:i18n : if translation files are located in sub directories, only the english translation is available. File organisation impact only.
 
 
 ## Improvement

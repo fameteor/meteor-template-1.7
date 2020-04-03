@@ -2,11 +2,11 @@
 	{{#with usersList}}
 		<div class="row">
 			<div class="col-md-8" >
-				<h2>{{> icon name="admin"}} {{_ "comp.adminUsers.title"}} ({{hlp_count .}})</h2>
+				<h2>{{> icon name="admin"}} {{_ "adminUsers.title"}} ({{hlp_count .}})</h2>
 			</div>
 			<div class="col-md-4" >
 				<br/>
-				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "comp.adminUsers.addButton"}}</button>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "adminUsers.addButton"}}</button>
 			</div>
 		</div>
 		<div class="row">
@@ -14,10 +14,10 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>{{_ "comp.adminUsers.alias"}}</th>
-							<th>{{_ "comp.adminUsers.email"}}</th>
-							<th>{{_ "comp.adminUsers.lastConnection"}}</th>
-							<th>{{_ "comp.adminUsers.permissions"}}</th>
+							<th>{{_ "adminUsers.alias"}}</th>
+							<th>{{_ "adminUsers.email"}}</th>
+							<th>{{_ "adminUsers.lastConnection"}}</th>
+							<th>{{_ "adminUsers.permissions"}}</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -44,7 +44,7 @@
 								</ul>
 							</td>
 							<td>
-								<button class="modifyUser btn btn-warning" title="{{_ "comp.adminUsers.modifyButton"}}">{{> icon name="modify"}}</button>
+								<button class="modifyUser btn btn-warning" title="{{_ "adminUsers.modifyButton"}}">{{> icon name="modify"}}</button>
 							</td>
 							<td>
 								<button class="deleteUser btn btn-danger" title="{{deleteButtonTitle}}" disabled="{{deleteButtonDisabled}}">{{> icon name="delete"}}</button>
@@ -58,11 +58,11 @@
 	{{else}}
 		<div class="row">
 			<div class="col-md-8" >
-				<h2>{{> icon name="admin"}} {{_ "comp.adminUsers.title"}} (0)</h2>
+				<h2>{{> icon name="admin"}} {{_ "adminUsers.title"}} (0)</h2>
 			</div>
 			<div class="col-md-4" >
 				<br/>
-				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "comp.adminUsers.addButton"}}</button>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "adminUsers.addButton"}}</button>
 			</div>
 		</div>
 	{{/with}}

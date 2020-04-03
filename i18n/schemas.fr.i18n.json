@@ -1,0 +1,10 @@
+{
+	"schemas": {
+		"userForm" : {
+			"alias": 		"alias",
+			"email": 		"e-mail",
+			"password": 	"mot de passe",
+			"roles":		"permissions"
+		}
+	}
+}

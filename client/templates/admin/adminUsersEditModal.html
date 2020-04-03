@@ -5,13 +5,13 @@
 					<!-- HEADER ========== -->
 					<div class="modal-header {{modalPopupHeaderClass}}">
 						{{#if hlp_eq action "INSERT"}}
-							{{_ "comp.adminUsersEditModal.addTitle"}}
+							{{_ "adminUsersEditModal.addTitle"}}
 						{{/if}}
 						{{#if hlp_eq action "UPDATE"}}
-							{{_ "comp.adminUsersEditModal.modifyTitle"}}
+							{{_ "adminUsersEditModal.modifyTitle"}}
 						{{/if}}
 						{{#if hlp_eq action "DELETE"}}
-							{{_ "comp.adminUsersEditModal.deleteTitle"}}
+							{{_ "adminUsersEditModal.deleteTitle"}}
 						{{/if}}
 					</div>
 					<!-- BODY ======== -->
@@ -29,8 +29,8 @@
 									{{> afQuickFields}}
 									<div class="row">
 										<div class="col-sm-12 text-center">
-											<button type="submit" class="btn btn-warning">{{_ "comp.adminUsersEditModal.addButton"}}</button>
-											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "comp.adminUsersEditModal.cancelButton"}}</button>
+											<button type="submit" class="btn btn-warning">{{_ "adminUsersEditModal.addButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
 										</div>
 									</div>
 								{{/autoForm}}
@@ -48,8 +48,8 @@
 									{{> afQuickFields}}
 									<div class="row">
 										<div class="col-sm-12 text-center">
-											<button type="submit" class="btn btn-warning">{{_ "comp.adminUsersEditModal.modifyButton"}}</button>
-											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "comp.adminUsersEditModal.cancelButton"}}</button>
+											<button type="submit" class="btn btn-warning">{{_ "adminUsersEditModal.modifyButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
 										</div>
 									</div>
 								{{/autoForm}}
@@ -57,11 +57,11 @@
 							{{#if hlp_eq action "DELETE"}}
 								<center>
 									<p>
-										{{{_ "comp.adminUsersEditModal.deleteMsg" doc.profile.alias}}}
+										{{{_ "adminUsersEditModal.deleteMsg" doc.profile.alias}}}
 									</p>
 									<br/>
-									<button type="button" class="btn btn-danger boutonSupprimer">{{_ "comp.adminUsersEditModal.deleteButton"}}</button>
-									<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "comp.adminUsersEditModal.cancelButton"}}</button>
+									<button type="button" class="btn btn-danger boutonSupprimer">{{_ "adminUsersEditModal.deleteButton"}}</button>
+									<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
 								</center>
 							{{/if}}
 						</div>

@@ -43,11 +43,11 @@ Template.adminUsersEditModal.events = {
 			function (err, response) {
 				if (err) 	{
 					Modal.hide(Template.instance());
-					toastr.warning(TAPi18n.__("comp.adminUsersEditModal.deleteErrorMsg") + TAPi18n.__(err.reason));
+					toastr.warning(TAPi18n.__("adminUsersEditModal.deleteErrorMsg") + TAPi18n.__(err.reason));
 				}
 				else 		{
 					Modal.hide(Template.instance());
-					toastr.success(TAPi18n.__("comp.adminUsersEditModal.deleteSuccessMsg"));
+					toastr.success(TAPi18n.__("adminUsersEditModal.deleteSuccessMsg"));
 				}
 			}
 		);
