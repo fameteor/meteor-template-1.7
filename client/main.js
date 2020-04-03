@@ -1,10 +1,7 @@
 // Client entry point, imports all client code
 import { Session } from 'meteor/session'
 // import { AccountsUIBootstrap3 } from 'meteor/accounts-ui-bootstrap-3'
-import '/imports/startup/client';
-import '/imports/startup/both';
 
-import '../imports/startup/both/schemas.js';
 
 
 // i18n initialisation
