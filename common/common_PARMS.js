@@ -15,7 +15,7 @@ common_PARMS_optionsList = function(paramName) {
 		return common_PARMS[paramName].map(function(value) {
 			return {
 				"value": value,
-				"label": TAPi18n.__("common_PARMS.permissions." + value)
+				"label": TAPi18n.__("common_PARMS." + paramName + "." + value)
 			};
 		});	
 	}
